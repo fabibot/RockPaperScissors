@@ -4,84 +4,46 @@
     <head>
         <meta charset="UTF-8">
         <title>Rock Paper Scissors</title>
+        <head>
+            <meta charset="utf-8">
+            <title>Ma page</title>
+            <link href="style.css" rel="stylesheet">
+        </head>
 
     </head>
     <body>
         <h1> Rock Paper Scissors !</h1>
-        <script>
-                
-                let choicesList = ["rock", "paper", "scissors" ];
+        
+
+        
+
+        <div>
+            <h2>let's start the game. The winner will be the best of five.</h2>
+        </div>
+        <h2 id="roundConter"> Round 0</h2>
+        <div style="background-color: beige;">
+            <div style=" display: flex; align-items: center; ">
+                <h3> Player :</h3>
+                <div>
+                    <button id="rockButton">Rock</button>
+                    <button id="paperButton">Paper</button>
+                    <button id="scissorsButton">Scissors</button>
+                </div>
+            </div>
+
+            <div style = "display: flex; align-items: center;">
+                <h3>Computer : </h3>
+                <p id="computerChoice" style="margin-left: 150px;"> Choice...</p>
+            </div>
+        </div>
 
 
-                function getComputerChoice() {
-                    let indexChoice = Math.floor(Math.random() * choicesList.length);
-                    let choice = choicesList[indexChoice];
-                    return choice;
-                };
+        <h3 id="roundResult"> ... </h3>
+        <h2 id="scoreTracker" style='margin-top:  200px'> Score : </h2>
 
-                function getPlayerChoice(){
-                    let choice;
-                    while (choicesList.includes(choice) != true){
-                        choice = prompt("Your turn : ").toLowerCase();
-                    }  
-                    return choice;
-                }
+        
 
-                function playRound (computerSelection, playerSelection){
-                    let roundResult;
-                    if( computerSelection == playerSelection){
-                        roundResult = "Egality ! Play again "
-                    }
-                    if (playerSelection == "scissors" && computerSelection == "paper"){
-                        roundResult = "You win ! Scissors beats paper."
-                    }
-                    if (playerSelection == "paper" && computerSelection == "rock"){
-                        roundResult = "You win ! Paper beats rock."
-                    }
-                    if (playerSelection == "rock" && computerSelection == "scissors"){
-                        roundResult = "You win ! Rock beats scissors."
-                    }
-                    if (computerSelection == "scissors" && playerSelection == "paper"){
-                        roundResult = "You loose... Scissors beats paper."
-                    }
-                    if (computerSelection == "paper" && playerSelection == "rock"){
-                        roundResult = "You loose... Paper beats rock."
-                    }
-                    if (computerSelection == "rock" && playerSelection == "scissors"){
-                        roundResult = "You loose... Rock beats scissors."
-                    }
-
-                    return roundResult;
-                }
-
-                function game(){
-                        playRoundResult = playRound(getComputerChoice(), getPlayerChoice())
-                        console.log(playRoundResult);
-                        let winnerTracker = playRoundResult.charAt(4);
-                        return winnerTracker;
-
-                }
-                console.log("Welcome to the game Rock paper scissors ! \nlet's start the game. The winner will be the best of five.")
-                let computerScore = 0;
-                let playerScore = 0;
-                for (let i =  1; i < 6; i++){
-                    console.log("Round " + i);
-                    let winner = game();
-                    if (winner == "w"){
-                        playerScore++;
-                    } if (winner == "l"){
-                        computerScore++;
-                    } else if (winner == "i"){
-                        i--;
-                    }
-                    console.log("Current score => Computer : " + computerScore + " Player : " + playerScore  );
-
-                }
-                    console.log(" THE FINAL SCORE => Computer : " + computerScore + " Player : " + playerScore  );
-
-                
-
-        </script>
+        <script src="main.js"></script>
     </body>
 </html>
 
