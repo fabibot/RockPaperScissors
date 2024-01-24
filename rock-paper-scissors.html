@@ -12,34 +12,42 @@
 
     </head>
     <body>
-        <h1> Rock Paper Scissors !</h1>
-        
-
-        
-
-        <div>
-            <h2>let's start the game. The winner will be the best of five.</h2>
+        <div class="centered">
+            <h1> Rock Paper Scissors !</h1>
         </div>
-        <h2 id="roundConter"> Round 0</h2>
-        <div style="background-color: beige;">
-            <div style=" display: flex; align-items: center; ">
-                <h3> Player :</h3>
-                <div>
-                    <button id="rockButton">Rock</button>
-                    <button id="paperButton">Paper</button>
-                    <button id="scissorsButton">Scissors</button>
-                </div>
+        <div>
+            <h2>the first player to get 5 points wins</h2>
+        </div>
+        <div class = "beigeDiv">
+            <div class = "scoreDiv">
+                <h2 id = "playerScore" > Player : </h2>
+                <h2 id = "computerScore"> Computer : </h2>
             </div>
+            <div class="centered playersDiv computerWidth">
+                <div class="grow">   
+                    <h3> Your turn :</h3>
+                    <div class="buttonStyle">
+                        <button id="rockButton">Rock</button>
+                        <button id="paperButton">Paper</button>
+                        <button id="scissorsButton">Scissors</button>
+                    </div>
+                </div>
 
-            <div style = "display: flex; align-items: center;">
-                <h3>Computer : </h3>
-                <p id="computerChoice" style="margin-left: 150px;"> Choice...</p>
+                <div class="grow">
+                    <h3>Computer : </h3>
+                    <div class="centered" style="height: 80%;">
+                        <button>
+                            <h4 id="computerChoice">...</h4>
+                        </button>
+                    </div>
+
+                </div>
             </div>
         </div>
 
 
         <h3 id="roundResult"> ... </h3>
-        <h2 id="scoreTracker" style='margin-top:  200px'> Score : </h2>
+       
 
         
 

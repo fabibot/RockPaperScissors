@@ -3,28 +3,26 @@ const paperButton = document.querySelector("#paperButton");
 const scissorsButton = document.querySelector("#scissorsButton");
 let scoreTracker = [0, 0];
 
-let round = 0;
-const roundConter = document.querySelector('#roundConter');
+
 
 let playerChoice;
 rockButton.addEventListener("click", () => {
     playerChoice = "rock";
     scoreTracker =  gestionScore(scoreTracker, playRound(playerChoice));
-    roundConter.textContent = "Round " + ++round;
 
 });
 
 paperButton.addEventListener("click", () => {
     playerChoice = "paper";
     scoreTracker =  gestionScore(scoreTracker, playRound(playerChoice));
-    roundConter.textContent = "Round " + ++round;
+   
 
 });
 
 scissorsButton.addEventListener("click", () => {
     playerChoice = "scissors";
     scoreTracker =  gestionScore(scoreTracker, playRound(playerChoice));
-    roundConter.textContent = "Round " + ++round;
+   
 
 });
     
@@ -79,8 +77,9 @@ function playRound (playerSelection){
     return addScoreTracker;
 }
 
+const computerScore = document.querySelector('#computerScore');
+const playerScore = document.querySelector('#playerScore');
 
-const DOMscoreTracker = document.querySelector('#scoreTracker');
 const backcolor = document.querySelector('body');
 function gestionScore (currentScore, scoreToAdd){
     let newScore = currentScore;
@@ -88,7 +87,8 @@ function gestionScore (currentScore, scoreToAdd){
     newScore[0] = currentScore[0] + scoreToAdd[0];
     newScore[1] = currentScore[1] + scoreToAdd[1];
     console.log(newScore);
-    DOMscoreTracker.textContent = "SCORE =>>>> Player : " + newScore[0] + " Computer : " + newScore[1];
+    playerScore.textContent = " Player : " + newScore[0];
+    computerScore.textContent = "Computer : " + newScore[1];
     if(newScore[0] == 5){
         backcolor.style.backgroundColor = "green";
         backcolor.textContent = "YOU WIN !!!!";
