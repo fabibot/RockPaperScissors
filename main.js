@@ -96,7 +96,7 @@ function gestionScore (currentScore, scoreToAdd){
         console.log("end of the game");
     } else if(newScore[1] == 5) {
         backcolor.style.backgroundColor = "red";
-        backcolor.textContent = "Looser...";
+        backcolor.textContent = "Loser...";
         backcolor.style.fontSize = "200px";
     }
     return newScore;
