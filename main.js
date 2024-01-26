@@ -60,15 +60,15 @@ function playRound (playerSelection){
         addScoreTracker = [1, 0];
     }
     if (computerSelection == "scissors" && playerSelection == "paper"){
-        roundResult = "You loose... Scissors beats paper."
+        roundResult = "You lose... Scissors beats paper."
         addScoreTracker = [0, 1];
     }
     if (computerSelection == "paper" && playerSelection == "rock"){
-        roundResult = "You loose... Paper beats rock."
+        roundResult = "You lose... Paper beats rock."
         addScoreTracker = [0, 1];
     }
     if (computerSelection == "rock" && playerSelection == "scissors"){
-        roundResult = "You loose... Rock beats scissors."
+        roundResult = "You lose... Rock beats scissors."
         addScoreTracker = [0, 1];
     }
     DOMroundResult.textContent = roundResult;
